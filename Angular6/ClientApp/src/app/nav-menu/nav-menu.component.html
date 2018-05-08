@@ -1,0 +1,29 @@
+<div class='main-nav'>
+  <nav class='navbar navbar-expand-md flex-column navbar-dark bg-dark'>
+    <div class='navbar-header'>
+      <a class='navbar-brand nav-link' [routerLink]='["/"]'>WebApplication1</a>
+      <button type='button' class='navbar-toggler navbar-toggler-right' data-toggle='collapse' data-target='.navbar-collapse' [attr.aria-expanded]='isExpanded' (click)='toggle()'>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class='navbar navbar-collapse collapse'>
+      <ul class='nav flex-column nav-pills'>
+        <li class="nav-item text-left" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+          <a class="nav-link" [routerLink]='["/"]' (click)='collapse()'>
+            <i class="fa fa-home"></i>&nbsp;Home
+          </a>
+        </li>
+        <li class="nav-item text-left" [routerLinkActive]='["link-active"]'>
+          <a class="nav-link" [routerLink]='["/counter"]' (click)='collapse()'>
+            <i class="fa fa-graduation-cap"></i>&nbsp;Counter
+          </a>
+        </li>
+        <li class="nav-item text-left" [routerLinkActive]='["link-active"]'>
+          <a class="nav-link" [routerLink]='["/fetch-data"]' (click)='collapse()'>
+            <i class="fa fa-th-list"></i>&nbsp;Fetch data
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
